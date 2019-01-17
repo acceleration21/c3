@@ -1,9 +1,27 @@
 #include <stdio.h>
-int arr[1024];
 int index = 0;
+int arr[1024];
 int isMingan(char x)
 {
     int count;
+    
+    for(int i = 0; i < index; i++)
+    {
+        
+        if (x == arr[i]) {
+            count++;
+        }
+        
+    }
+    
+    if (count == 0) {
+        return 0;
+    }
+    else{
+        return 1;
+    }
+    
+    
 }
 int main()
 {
@@ -67,6 +85,28 @@ int main()
         }
         if (code == 4)
         {
+            printf("输入字符串:\n");
+            char neriong[1024];
+            scanf("%s",&neriong);
+             for (int i = 0; 1; i++)
+            {
+
+                if (neriong[i] == '\0')
+                {
+                    break;
+                }
+
+                if (isMingan(neriong[i]) == 1)
+                {
+                    neriong[i] == '*';
+                }
+                printf("%c", neriong[i]);
+            }
+            printf("回车继续\n");
+
+            char x;
+            scanf("%c", &x);
+            scanf("%c", &x);
         }
         if (code == 5)
         {
