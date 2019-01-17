@@ -18,7 +18,7 @@ int main()
         printf("5--退出\n");
 
         int code;
-        printf("请输入功能编号");
+        printf("请输入功能编号\n");
         scanf("%d", &code);
 
         if (code == 1)
@@ -37,6 +37,21 @@ int main()
         }
         if (code == 2)
         {
+
+            if (index >= 1)
+            {
+                index--;
+                printf("删除成功，回车继续\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
+            else{
+                printf("删除失败，回车继续\n");
+                char x;
+                scanf("%c", &x);
+                scanf("%c", &x);
+            }
         }
         if (code == 3)
         {
